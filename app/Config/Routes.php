@@ -56,6 +56,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('users/(:num)', 'Users::update/$1');
     $routes->post('users/(:num)/delete', 'Users::delete/$1');
 
+    $routes->get('components', 'Components::index');
+
     $routes->get('settings', 'Settings::index');
     $routes->post('settings', 'Settings::update');
 });
